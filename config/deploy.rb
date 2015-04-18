@@ -1,6 +1,3 @@
-# config valid only for current version of Capistrano
-lock '3.4.0'
-
 set :application, 'spree'
 set :scm, :git
 set :repo_url, 'git://github.com/satishkgupta/mystore'
@@ -10,7 +7,7 @@ set :user, "deploy"
 set :deploy_to, '/data/spree'
 set :log_level, :debug
 set :app_server, :puma
-set :domain, "www.vegakart.com"
+domain = "deploy@176.58.125.236"
 role :app, domain
 role :web, domain
 role :db, domain, :primary => true

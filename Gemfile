@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+# gem 'pg'
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,7 +49,7 @@ group :development, :test do
   gem 'capistrano', '~> 3.0'
   gem 'capistrano-bundler', '1.1.1'
   gem 'capistrano-rails', '1.1.0'
-  
+
 end
 
 gem 'spree', git: 'https://github.com/spree/spree.git', branch: '3-0-stable'
