@@ -22,4 +22,4 @@ test:
 
 production:
   adapter: postgresql
-  database: app_{{app_name}}
+  database: app_spree
