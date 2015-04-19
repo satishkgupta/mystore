@@ -1,0 +1,12 @@
+LOG:  database system was shut down at 2015-04-19 12:52:27 IST
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+LOG:  database system was interrupted; last known up at 2015-04-19 12:52:40 IST
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  record with zero length at 0/16C8660
+LOG:  redo is not required
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+LOG:  received SIGHUP, reloading configuration files
+FATAL:  could not open directory "/usr/local/Cellar/postgresql/9.4.1/share/postgresql/timezonesets": No such file or directory
+HINT:  This may indicate an incomplete PostgreSQL installation, or that the file "/usr/local/Cellar/postgresql/9.4.1/bin/postgres" has been moved away from its proper location.

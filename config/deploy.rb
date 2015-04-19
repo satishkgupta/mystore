@@ -7,6 +7,7 @@ set :user, "deploy"
 set :deploy_to, '/data/spree'
 set :log_level, :debug
 set :app_server, :puma
+set :keep_releases, 5
 domain = "deploy@176.58.125.236"
 role :app, domain
 role :web, domain
