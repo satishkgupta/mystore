@@ -11,7 +11,7 @@ set :keep_releases, 5
 domain = "deploy@139.162.14.58"
 role :app, domain
 role :web, domain
-role :db, 176.58.125.236, :primary => true
+role :db, "176.58.125.236", :primary => true
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{tmp/sockets log config/puma public/spree}
 set :sockets_path, Pathname.new("#{fetch(:deploy_to)}/shared/tmp/sockets/")
