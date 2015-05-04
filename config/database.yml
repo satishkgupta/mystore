@@ -79,7 +79,13 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: app_spree
+  adapter: postgresql
+  encoding: unicode
+  host: 176.58.125.236
+  port: 5432
+  database: accounting_db
+  pool: 5
+  username: adamjcook
+  password: Password1
 #  username: mystorepg
 #  password: <%= ENV['MYSTOREPG_DATABASE_PASSWORD'] %>
