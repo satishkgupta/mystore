@@ -79,6 +79,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+  adapter: postgresql
+  encoding: unicode
   host: 176.58.125.236
   port: 5432
   database: accounting_db
