@@ -9,7 +9,7 @@ set :log_level, :debug
 set :use_sudo, false
 set :app_server, :puma
 set :keep_releases, 5
-domain = "root@88.80.187.56"
+domain = "deploy@88.80.187.56"
 role :app, domain
 role :web, domain
 role :db, 'root@176.58.125.236', :primary => true
@@ -21,10 +21,8 @@ set :sockets_path, Pathname.new("#{fetch(:deploy_to)}/shared/tmp/sockets/")
 # See issue #4.
 set :puma_roles, :app
 set :puma_socket, "unix://#{fetch(:sockets_path).join('puma_' + fetch(:application) + '.sock')}"
-
-# Multi bind
-# set :puma_bind, %w(tcp://0.0.0.0:9292 unix:///tmp/puma.sock)
-
+#set :puma_socket, "tcp://88.80.187.56:80"
+#set :puma_bind, "tcp://88.80.187.56:80"
 set :pumactl_socket, "unix://#{fetch(:sockets_path).join('pumactl_' + fetch(:application) + '.sock')}"
 set :puma_state, fetch(:sockets_path).join('puma.state') 
 set :puma_log, -> { shared_path.join("log/puma-#{fetch(:stage )}.log") }
